@@ -7,7 +7,7 @@
  */
 
 (function () {
-    var asciiContainer = document.getElementById("ascii");
+    var asciiContainer = document.getElementById('ascii');
     var capturing = false;
 
     camera.init({
@@ -26,17 +26,17 @@
         },
 
         onSuccess: function () {
-            document.getElementById("info").style.display = "none";
+            document.getElementById('info').style.display = 'none';
 
-            const button = document.getElementById("button");
-            button.style.display = "block";
+            const button = document.getElementById('button');
+            button.style.display = 'block';
             button.onclick = function () {
                 if (capturing) {
                     camera.pause();
-                    button.innerText = "resume";
+                    button.innerText = 'resume';
                 } else {
                     camera.start();
-                    button.innerText = "pause";
+                    button.innerText = 'pause';
                 }
                 capturing = !capturing;
             };
@@ -47,9 +47,9 @@
         },
 
         onNotSupported: function () {
-            document.getElementById("info").style.display = "none";
-            asciiContainer.style.display = "none";
-            document.getElementById("notSupported").style.display = "block";
+            document.getElementById('info').style.display = 'none';
+            asciiContainer.style.display = 'none';
+            document.getElementById('notSupported').style.display = 'block';
         },
     });
 })();

@@ -60,7 +60,7 @@ loadExample = function (selectedExample) {
         xSandboxAreaScan,
         ySandboxAreaScan;
     if (selectedExample == null) {
-        selectedExample = document.getElementById("exampleSelection");
+        selectedExample = document.getElementById('exampleSelection');
         selectedExample =
             selectedExample.options[selectedExample.selectedIndex].value;
     }
@@ -73,13 +73,13 @@ loadExample = function (selectedExample) {
     results = [];
     for (i = 0, len = ref.length; i < len; i++) {
         x = ref[i];
-        if (x === "\n") {
+        if (x === '\n') {
             ySandboxAreaScan += 2;
             xSandboxAreaScan = -1;
-        } else if (x !== " ") {
+        } else if (x !== ' ') {
             particles.push(new Particle());
             particles.push(new Particle());
-            if (x === "#") {
+            if (x === '#') {
                 particles[particlesCounter].wallflag = particles[
                     particlesCounter + 1
                 ].wallflag = 1;
@@ -289,22 +289,22 @@ simulationNextStep = function () {
             particles[particlesCursor].dead = true;
         }
     }
-    screenBufferString = "";
+    screenBufferString = '';
     for (
         screenBufferIndex = k = 0, ref2 = CONSOLE_WIDTH * CONSOLE_HEIGHT;
         0 <= ref2 ? k < ref2 : k > ref2;
         screenBufferIndex = 0 <= ref2 ? ++k : --k
     ) {
         if (screenBufferIndex % CONSOLE_WIDTH === CONSOLE_WIDTH - 1) {
-            screenBufferString += "<br>";
+            screenBufferString += '<br>';
         } else {
             screenBufferString += " '`-.|//,\\|\\_\\/#"[
                 screenBuffer[screenBufferIndex]
             ];
         }
     }
-    document.getElementById("simulationOutput").innerHTML =
-        screenBufferString.replace(/ /g, "&nbsp;");
+    document.getElementById('simulationOutput').innerHTML =
+        screenBufferString.replace(/ /g, '&nbsp;');
     return window.requestAnimationFrame(simulationNextStep);
 };
 

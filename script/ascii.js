@@ -5,13 +5,13 @@ var ascii = (function () {
         // Original code by Jacob Seidelin (http://www.nihilogic.dk/labs/jsascii/)
         // Heavily modified by Andrei Gheorghe (http://github.com/idevelop)
 
-        var characters = " .,:;i1tfLCG08@".split("");
+        var characters = ' .,:;i1tfLCG08@'.split('');
 
-        var context = canvas.getContext("2d");
+        var context = canvas.getContext('2d');
         var canvasWidth = canvas.width;
         var canvasHeight = canvas.height;
 
-        var asciiCharacters = "";
+        var asciiCharacters = '';
 
         // calculate contrast factor
         // http://www.dfstudios.co.uk/articles/image-processing-algorithms-part-5/
@@ -64,7 +64,7 @@ var ascii = (function () {
                 asciiCharacters += character;
             }
 
-            asciiCharacters += "\n";
+            asciiCharacters += '\n';
         }
 
         options.callback(asciiCharacters);
@@ -87,7 +87,7 @@ var ascii = (function () {
         fromCanvas: function (canvas, options) {
             options = options || {};
             options.contrast =
-                typeof options.contrast === "undefined"
+                typeof options.contrast === 'undefined'
                     ? 128
                     : options.contrast;
             options.callback = options.callback || doNothing;

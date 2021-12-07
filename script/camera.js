@@ -11,11 +11,11 @@ var camera = (function () {
     var renderTimer;
 
     function initVideoStream() {
-        video = document.createElement("video");
-        video.setAttribute("width", options.width);
-        video.setAttribute("height", options.height);
-        video.setAttribute("playsinline", "true");
-        video.setAttribute("webkit-playsinline", "true");
+        video = document.createElement('video');
+        video.setAttribute('width', options.width);
+        video.setAttribute('height', options.height);
+        video.setAttribute('playsinline', 'true');
+        video.setAttribute('webkit-playsinline', 'true');
 
         navigator.getUserMedia =
             navigator.getUserMedia ||
@@ -51,11 +51,11 @@ var camera = (function () {
     }
 
     function initCanvas() {
-        canvas = options.targetCanvas || document.createElement("canvas");
-        canvas.setAttribute("width", options.width);
-        canvas.setAttribute("height", options.height);
+        canvas = options.targetCanvas || document.createElement('canvas');
+        canvas.setAttribute('width', options.width);
+        canvas.setAttribute('height', options.height);
 
-        context = canvas.getContext("2d");
+        context = canvas.getContext('2d');
 
         // mirror video
         if (options.mirror) {
