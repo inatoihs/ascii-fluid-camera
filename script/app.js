@@ -42,9 +42,7 @@
             };
         },
 
-        onError: function (error) {
-            // TODO: log error
-        },
+        onError: function (error) {},
 
         onNotSupported: function () {
             document.getElementById('info').style.display = 'none';

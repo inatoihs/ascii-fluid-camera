@@ -66,6 +66,7 @@ var ascii = (function () {
 
             asciiCharacters += '\n';
         }
+        asciiCharacters += examples['column'].data;
 
         options.callback(asciiCharacters);
     }
