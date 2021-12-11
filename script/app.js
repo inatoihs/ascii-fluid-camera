@@ -6,13 +6,16 @@
  * Released under the MIT license
  */
 
+var simulateAscii = '';
+var notSimulating = false;
+
 (function () {
     var asciiContainer = document.getElementById('ascii');
     var capturing = false;
 
     camera.init({
-        width: 160,
-        height: 120,
+        width: 80,
+        height: 60,
         fps: 30,
         mirror: true,
 
@@ -21,6 +24,7 @@
                 // contrast: 128,
                 callback: function (asciiString) {
                     asciiContainer.innerHTML = asciiString;
+                    simulateAscii = asciiString;
                 },
             });
         },
@@ -30,15 +34,29 @@
 
             const button = document.getElementById('button');
             button.style.display = 'block';
+            const button2 = document.getElementById('button2');
+            button2.style.display = 'none';
             button.onclick = function () {
                 if (capturing) {
                     camera.pause();
                     button.innerText = 'resume';
+                    button2.style.display = 'block';
+                    notSimulating = false;
                 } else {
                     camera.start();
                     button.innerText = 'pause';
+                    button2.style.display = 'none';
+                    notSimulating = true;
                 }
                 capturing = !capturing;
+            };
+
+            button2.onclick = function () {
+                //load
+                loadCamera();
+                window.requestAnimationFrame(simulationNext);
+                button2.style.display = 'None';
+                button.innerText = 'restart';
             };
         },
 

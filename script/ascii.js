@@ -5,7 +5,7 @@ var ascii = (function () {
         // Original code by Jacob Seidelin (http://www.nihilogic.dk/labs/jsascii/)
         // Heavily modified by Andrei Gheorghe (http://github.com/idevelop)
 
-        var characters = ' .,:;i1tfLCG08@'.split('');
+        var characters = '  .:;i1tfLCG08@'.split('');
 
         var context = canvas.getContext('2d');
         var canvasWidth = canvas.width;
@@ -66,7 +66,6 @@ var ascii = (function () {
 
             asciiCharacters += '\n';
         }
-        asciiCharacters += examples['column'].data;
 
         options.callback(asciiCharacters);
     }

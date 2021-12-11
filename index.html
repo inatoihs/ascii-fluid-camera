@@ -14,39 +14,16 @@
             <h1>Your browser does not support the Camera API.</h1>
             <img src="images/screenshot.png" align="center" />
         </div>
-        <button id="button">start</button>
-        <pre id="ascii"></pre>
-        <!--ここから下シミュレータ-->
-        <select onchange="loadExample()" id="exampleSelection">
-        </select>
-        
-        <div id="simulationOutput" style="font-family:'Courier'; font-size:small;">
-        
-        <script src="/script/examples.js"></script>
-        
-        <script>
-        // this just populates the selectbox at the top
-        // of the page with all the examples in the
-        // examples.js file
-        var eachExample, exampleData, exampleName, opt, sel;
-        sel = document.getElementById('exampleSelection');
-        for (eachExample in examples) {
-          exampleName = examples[eachExample].name;
-          exampleData = examples[eachExample].data;
-          opt = document.createElement('option');
-          opt.appendChild(document.createTextNode(exampleName));
-          opt.value = "" + eachExample;
-          sel.appendChild(opt);
-        }
-        </script>
+        <div id="buttons">
+            <button id="button">start</button>
+            <button id="button2">simulate</button>
+        </div>
+        <pre id="ascii" style="font-family: 'Courier'"></pre>
+        <!--出力-->
 
         <script src="script/camera.js"></script>
         <script src="script/ascii.js"></script>
         <script src="script/app.js"></script>
-        <script src="script/asciiFluidSimulation.js"></script>
-        <script>
-            loadExample();
-            window.requestAnimationFrame(simulationNextStep);
-        </script>
+        <script src="script/asciiCameraFluid.js"></script>
     </body>
 </html>
