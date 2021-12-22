@@ -21,7 +21,6 @@ var notSimulating = false;
 
         onFrame: function (canvas) {
             ascii.fromCanvas(canvas, {
-                // contrast: 128,
                 callback: function (asciiString) {
                     asciiContainer.innerHTML = asciiString;
                     simulateAscii = asciiString;
