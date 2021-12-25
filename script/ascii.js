@@ -1,4 +1,5 @@
 // Author: Andrei Gheorghe (http://github.com/idevelop)
+// and inatoihs (https://github.com/inatoihs) made some very minor changes
 
 var ascii = (function () {
     function asciiFromCanvas(canvas, options) {

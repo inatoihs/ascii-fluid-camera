@@ -5,6 +5,7 @@
  * Copyright 2013, Andrei Gheorghe (http://github.com/idevelop)
  * Released under the MIT license
  */
+// and inatoihs (https://github.com/inatoihs) made some very minor changes
 
 var simulateAscii = '';
 var notSimulating = false;
