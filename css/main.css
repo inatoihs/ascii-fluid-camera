@@ -34,58 +34,51 @@ h1 {
     text-align: center;
 }
 
-#fork,
-#idevelop {
-    display: block;
-    position: fixed;
-    z-index: 10;
-
-    top: 0;
-    right: 30px;
-    padding: 10px 50px 10px 10px;
-
-    background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
-    border: 1px solid #0090ff;
-    border-top: 0;
-
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    text-decoration: none;
-    color: #fff;
-
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-}
-
-#fork:hover,
-#idevelop:hover {
-    text-decoration: underline;
-}
-
-#idevelop {
-    border: 1px solid #eee;
-    border-top: 0;
-    color: #333;
-    right: 200px;
-    background: url('../images/idevelop.png') #fff no-repeat 95% 50%;
-}
-
 #button {
-    display: none;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border: none;
+    margin: 0.5em;
+    color: #090909;
+    padding: 0.7em 1.7em;
     font-size: 18px;
-}
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
+   }
+   
+   button:hover {
+    border: 1px solid white;
+   }
+   
+   button:active {
+    box-shadow: 4px 4px 12px #c5c5c5,
+                -4px -4px 12px #ffffff;
+   }
 
 #button2 {
-    display: none;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border: none;
+    margin: 0.5em;
+    color: #090909;
+    padding: 0.7em 1.7em;
     font-size: 18px;
-}
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
+   }
+   
+   button2:hover {
+    border: 1px solid white;
+   }
+   
+   button2:active {
+    box-shadow: 4px 4px 12px #c5c5c5,
+                -4px -4px 12px #ffffff;
+   }
 
 #buttons {
     display: flex;
