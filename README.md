@@ -9,5 +9,5 @@
 粒子のシミュレーションの挙動が一部おかしいです
 
 ## 元にしたリポジトリ
-https://github.com/idevelop/ascii-camera
+https://github.com/idevelop/ascii-camera  
 https://github.com/davidedc/Basic-fluid-simulation-in-the-browser
